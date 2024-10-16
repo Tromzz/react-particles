@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import ParticlesComponent from './components/particles'; // Ensure proper import path
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ position: 'relative' }}>
+      {/* Ensure the id matches what the Particles component is expecting */}
+      <ParticlesComponent id="tsparticles"  />
+      <div style={{ position:'absolute', zIndex:1 }}>
+      <h1>this is the firefly particles demo</h1>
+      </div>
     </div>
   );
 }
